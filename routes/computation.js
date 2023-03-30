@@ -8,11 +8,11 @@ router.get('/', function(req, res, next) {
         x=req.query.x;
 
     }
-    let r=Math.pow(x);
+    let r=Math.trunc(x);
     let t=Math.sign(x);
     let n=Math.tanh(x);
     
-  res.render('computation', { x:x,pow:r, sign:t, tanh:n});
+  res.render('computation', { x:x,trunc:r, sign:t, tanh:n});
 });
 
 module.exports = router;
